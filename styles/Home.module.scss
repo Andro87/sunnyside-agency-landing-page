@@ -1,3 +1,4 @@
+@import "../styles/variables.scss";
 .main_wrap {
     width: 100%;
 }
@@ -8,15 +9,17 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 25px 50px 250px;
+    padding: 40px 0 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         padding-bottom: 300px;
         background: url("../public/images/desktop/image-header.jpg");
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
-        text-align: center;
     }
 }
 
@@ -25,10 +28,14 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    /*****************/
+    width: 90%;
+
+    @media screen and (min-width: $tablet) {
+        width: 80%;
+    }
 }
 .btn_mobile {
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         display: none;
     }
 }
@@ -50,19 +57,20 @@
         text-decoration: none;
         font-family: "barlow";
         font-weight: 600;
-        color: var(--VeryDarkGrayishBlue);
+        font-size: 1rem;
+        color: var(--DarkGrayishBlue);
         margin-bottom: 20px;
         &:hover {
             color: var(--SoftRed);
         }
     }
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         display: none;
     }
 }
 .menu {
     display: none;
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
         a {
@@ -85,7 +93,7 @@
     position: absolute;
     right: 0;
     bottom: 100%;
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         display: none;
     }
 }
@@ -104,7 +112,7 @@
         color: var(--White);
         cursor: pointer;
     }
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         background: var(--White);
         margin-left: 50px;
     }
@@ -114,97 +122,122 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     color: var(--White);
+
     a {
         font-family: "fraunces";
         font-weight: 900;
         text-decoration: none;
         color: var(--VeryDarkDesaturatedBlue);
     }
-    @media screen and (min-width: 750px) {
+
+    @media screen and (min-width: $tablet) {
         flex-direction: row;
+        justify-content: center;
+        align-items: initial;
     }
 }
 
 .order {
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         flex-direction: row-reverse;
     }
 }
 .section_image {
     display: flex;
-
-    img {
+    img,
+    picture {
         width: 100%;
         height: 100%;
     }
 
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         width: 50%;
     }
 }
 .section_detail {
-    padding: 70px 25px;
+    padding: 70px 10px;
+    width: 90%;
     p {
         margin-bottom: 40px;
+        margin-top: 35px;
     }
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
-    @media screen and (min-width: 900px) {
-        padding: 150px;
+}
+.detail_wrap {
+    @media screen and (min-width: $tablet) {
+        width: 70%;
     }
 }
 .more {
     width: fit-content;
     margin: auto;
-}
-.underline {
-    height: 10px;
-    border-radius: 8px;
-    background: var(--Yellow);
-    opacity: 0.3;
     position: relative;
-    bottom: 8px;
-    right: 5px;
-    z-index: -1;
-    width: 110%;
-    margin: auto;
-    @media screen and (min-width: 750px) {
+    &::after {
+        content: "";
+        height: 10px;
+        width: 110%;
+        border-radius: 8px;
+        background-color: var(--Yellow);
+        opacity: 0.4;
+        position: absolute;
+        bottom: 0;
+        left: -5px;
+        z-index: -1;
+    }
+    &:hover::after {
+        opacity: 1;
+    }
+    @media screen and (min-width: $tablet) {
         margin: initial;
+        margin-right: auto;
     }
 }
+
 .red_underline {
-    background: var(--SoftRed);
+    &::after {
+        background-color: var(--SoftRed);
+    }
 }
 
 .wrap {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
     width: 100%;
+
     img {
         width: 100%;
         height: 100%;
     }
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         text-align: center;
-        align-items: center;
+        width: 50%;
     }
 }
 .info_wrap {
     position: absolute;
-    bottom: 0;
-    padding: 0 25px 50px;
+    bottom: 90px;
+    width: 90%;
 
     p {
         color: var(--DarkDesaturatedCyan);
     }
-    @media screen and (min-width: 900px) {
-        width: 70%;
+    @media screen and (min-width: $tablet) {
+        bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        bottom: 50px;
+        width: 60%;
     }
 }
 .photography {
@@ -214,31 +247,31 @@
     }
 }
 .testimonial_container {
-    width: 100%;
-    padding: 70px 25px;
-
-    @media screen and (min-width: 750px) {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    width: 90%;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    @media screen and (min-width: $tablet) {
+        width: 100%;
+        padding-top: 80px;
+        padding-bottom: 100px;
     }
 }
 .title {
     color: var(--GrayishBlue);
-    @media screen and (min-width: 750px) {
-        margin-bottom: 50px;
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 40px;
     }
 }
 .testimonial_wrap {
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
+        width: 80%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 12px;
-    }
-
-    @media screen and (min-width: 900px) {
-        width: 80%;
+        grid-column-gap: 20px;
     }
 }
 .image_container {
@@ -249,20 +282,21 @@
         width: 100%;
         height: 100%;
     }
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 .footer {
     width: 100%;
-    background-color: hsla(168, 34%, 41%, 0.5); /*rivedere*/
+    background-color: hsl(169, 58%, 77%);
     padding: 70px 25px;
 }
 .footer_container {
-    @media screen and (min-width: 750px) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: $tablet) {
         width: 30%;
-        margin-left: auto;
-        margin-right: auto;
         text-align: center;
     }
     svg {
@@ -272,6 +306,7 @@
         }
     }
 }
+
 .link_wrap {
     display: flex;
     justify-content: space-between;
@@ -288,11 +323,11 @@
     }
 }
 .social {
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px auto 0;
+    margin: 80px auto 0;
     svg {
         &:hover {
             path {

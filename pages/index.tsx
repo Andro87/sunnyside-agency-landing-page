@@ -14,7 +14,7 @@ export default function Home() {
                 />
                 <link rel="icon" href="/images/favicon-32x32.png" />
             </Head>
-            <div className={styles.header}>
+            <header className={styles.header}>
                 <div className={styles.navigation_wrap}>
                     <img src="../images/logo.svg" alt="logo" />
 
@@ -74,9 +74,9 @@ export default function Home() {
                         </g>
                     </svg>
                 </div>
-            </div>
+            </header>
 
-            <div className={`${styles.section} ${styles.order}`}>
+            <section className={`${styles.section} ${styles.order}`}>
                 <div className={styles.section_image}>
                     <picture>
                         <source
@@ -87,22 +87,23 @@ export default function Home() {
                     </picture>
                 </div>
                 <div className={styles.section_detail}>
-                    <h2>Transform your brand</h2>
+                    <div className={styles.detail_wrap}>
+                        <h2>Transform your brand</h2>
 
-                    <p>
-                        We are a full-service creative agency specializing in
-                        helping brands grow fast. Engage your clients through
-                        compelling visuals that do most of the marketing for
-                        you.
-                    </p>
-                    <div className={styles.more}>
-                        <a href="#">LEARN MORE</a>
-                        <div className={styles.underline}></div>
+                        <p>
+                            We are a full-service creative agency specializing
+                            in helping brands grow fast. Engage your clients
+                            through compelling visuals that do most of the
+                            marketing for you.
+                        </p>
+                        <div className={styles.more}>
+                            <a href="#">LEARN MORE</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className={styles.section}>
+            <section className={styles.section}>
                 <div className={styles.section_image}>
                     <picture>
                         <source
@@ -113,22 +114,24 @@ export default function Home() {
                     </picture>
                 </div>
                 <div className={styles.section_detail}>
-                    <h2>Stand out to the right audience</h2>
-                    <p>
-                        Using a collaborative formula of designers, researchers,
-                        photographers, videographers, and copywriters, we’ll
-                        build and extend your brand in digital places. .
-                    </p>
-                    <div className={styles.more}>
-                        <a href="#">LEARN MORE</a>
+                    <div className={styles.detail_wrap}>
+                        <h2>Stand out to the right audience</h2>
+                        <p>
+                            Using a collaborative formula of designers,
+                            researchers, photographers, videographers, and
+                            copywriters, we’ll build and extend your brand in
+                            digital places. .
+                        </p>
                         <div
-                            className={`${styles.underline} ${styles.red_underline}`}
-                        ></div>
+                            className={`${styles.more} ${styles.red_underline}`}
+                        >
+                            <a href="#">LEARN MORE</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className={styles.section}>
+            <section className={styles.section}>
                 <div className={styles.wrap}>
                     <picture>
                         <source
@@ -174,7 +177,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <div className={styles.testimonial_container}>
                 <h4 className={styles.title}> CLIENT TESTIMONIALS</h4>
@@ -241,7 +244,7 @@ export default function Home() {
                     />
                 </picture>
             </div>
-            <div className={styles.footer}>
+            <footer className={styles.footer}>
                 <div className={styles.footer_container}>
                     <svg
                         width="124"
@@ -307,7 +310,7 @@ export default function Home() {
                         </svg>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
     );
 }

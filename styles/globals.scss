@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -42,8 +44,8 @@ html {
 
 body {
     text-align: center;
-    font-size: clamp(0.8rem, 3vw, 1rem);
-    @media screen and (min-width: 750px) {
+
+    @media screen and (min-width: $tablet) {
         text-align: start;
     }
 }
@@ -55,28 +57,32 @@ h4 {
     font-weight: 900;
 }
 h1 {
-    font-size: clamp(1.45rem, 5vw, 3rem);
+    font-size: 2.5rem;
     letter-spacing: 0.4rem;
     color: var(--White);
     margin-top: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 h2 {
-    font-size: clamp(1rem, 4vw, 2rem);
+    font-size: 2.2rem;
     color: var(--VeryDarkDesaturatedBlue);
-    margin-bottom: 30px;
 }
 h3 {
-    font-size: clamp(0.8rem, 3vw, 1.7rem);
+    font-size: 1.8rem;
     color: var(--DarkDesaturatedCyan);
     margin-bottom: 30px;
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: $tablet) {
         margin-bottom: 25px;
     }
+}
+h4 {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
 }
 p {
     font-family: "barlow";
     font-weight: 600;
     color: var(--DarkGrayishBlue);
     line-height: 150%;
+    font-size: 1rem;
 }

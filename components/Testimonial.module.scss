@@ -1,13 +1,19 @@
+@import "../styles/variables.scss";
+
 .testimonial {
     img {
         border-radius: 50%;
         height: 80px;
         width: 80px;
-        margin-top: 50px;
+        margin-top: 70px;
         margin-bottom: 30px;
-        @media screen and (min-width: 750px) {
+
+        @media screen and (min-width: $tablet) {
             margin-bottom: 45px;
         }
+    }
+    @media screen and (min-width: $tablet) {
+        text-align: center;
     }
 }
 .details {
@@ -15,13 +21,14 @@
         color: var(--VeryDarkDesaturatedBlue);
         margin-bottom: 10px;
         margin-top: 30px;
-        @media screen and (min-width: 750px) {
+        letter-spacing: 0;
+        @media screen and (min-width: $tablet) {
             margin-top: 50px;
         }
     }
     p {
         color: var(--GrayishBlue);
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         opacity: 0.7;
     }
 }
