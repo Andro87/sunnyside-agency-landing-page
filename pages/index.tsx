@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Testimonial from "../components/Testimonial";
 import { useState } from "react";
+
 export default function Home() {
     const [open, setOpen] = useState(false);
     return (
@@ -18,29 +19,31 @@ export default function Home() {
                 <div className={styles.navigation_wrap}>
                     <img src="../images/logo.svg" alt="logo" />
 
-                    <div className={styles.btn_mobile}>
-                        <button
-                            type="button"
-                            aria-label="menu"
-                            className={styles.hamburger_btn}
-                            onClick={() => setOpen(!open)}
+                    <button
+                        type="button"
+                        aria-label="menu"
+                        className={styles.hamburger_btn}
+                        onClick={() => setOpen(!open)}
+                    >
+                        <svg
+                            width="24"
+                            height="18"
+                            xmlns="http://www.w3.org/2000/svg"
                         >
-                            <svg
-                                width="24"
-                                height="18"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
-                                    fill="#FFF"
-                                    fillRule="evenodd"
-                                />
-                            </svg>
-                        </button>
-                    </div>
+                            <path
+                                d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
+                                fill="#FFF"
+                                fillRule="evenodd"
+                            />
+                        </svg>
+                    </button>
 
-                    <div className={open ? styles.menu_mobile : styles.menu}>
-                        <div className={styles.triangle}></div>
+                    <div
+                        className={`${styles.menu} ${
+                            open ? styles.menu_mobile : null
+                        } `}
+                    >
+                        <div className={open ? styles.triangle : null}></div>
                         <a href="#">About</a>
                         <a href="#">Services</a>
                         <a href="#">Projects</a>
@@ -120,7 +123,7 @@ export default function Home() {
                             Using a collaborative formula of designers,
                             researchers, photographers, videographers, and
                             copywriters, we’ll build and extend your brand in
-                            digital places. .
+                            digital places.
                         </p>
                         <div
                             className={`${styles.more} ${styles.red_underline}`}

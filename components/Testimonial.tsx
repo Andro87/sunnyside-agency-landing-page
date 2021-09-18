@@ -14,7 +14,7 @@ const Testimonial: React.FunctionComponent<Props> = props => {
             {picture}
             <p>{info}</p>
             <div className={styles.details}>
-                <h4>{name}</h4>
+                <h5>{name}</h5>
                 <p>{position}</p>
             </div>
         </div>

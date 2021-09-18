@@ -39,7 +39,7 @@
     --White: hsl(0, 0%, 100%);
 }
 html {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 body {
@@ -52,37 +52,48 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     font-family: "fraunces";
     font-weight: 900;
 }
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /*40*/
     letter-spacing: 0.4rem;
     color: var(--White);
     margin-top: 80px;
     margin-bottom: 40px;
+    @media screen and (min-width: $tablet) {
+        font-size: 3.5rem; /*65*/
+    }
 }
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--VeryDarkDesaturatedBlue);
+    @media screen and (min-width: $tablet) {
+        font-size: 2.5rem; /*65*/
+    }
 }
 h3 {
-    font-size: 1.8rem;
-    color: var(--DarkDesaturatedCyan);
+    font-size: 1.75rem; /*28*/
+
     margin-bottom: 30px;
     @media screen and (min-width: $tablet) {
         margin-bottom: 25px;
     }
 }
 h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.2rem;
+    @media screen and (min-width: $tablet) {
+        font-size: 1.25rem; /*20*/
+    }
+}
+h5 {
+    font-size: 1.125rem; /*18*/
 }
 p {
     font-family: "barlow";
     font-weight: 600;
-    color: var(--DarkGrayishBlue);
-    line-height: 150%;
-    font-size: 1rem;
+    /*dark greishblue*/
 }
