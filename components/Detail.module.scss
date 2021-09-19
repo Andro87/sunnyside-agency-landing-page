@@ -1,0 +1,52 @@
+@import "../styles/variables.scss";
+
+.detail_container {
+    border: 2px solid orangered;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    picture {
+        display: flex;
+    }
+    picture,
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.info_wrap {
+    border: 2px solid purple;
+    position: absolute;
+    padding: 0 24px 60px;
+    bottom: 0;
+    margin-top: auto;
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        max-width: 340px;
+        padding: 0 0 60px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.7rem;
+        margin-top: 25px;
+    }
+}
+
+.green {
+    h3,
+    p {
+        color: var(--DarkDesaturatedCyan);
+    }
+}
+.blue {
+    h3,
+    p {
+        color: var(--DarkBlue);
+    }
+}
