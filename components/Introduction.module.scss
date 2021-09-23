@@ -1,7 +1,6 @@
 @import "../styles/variables.scss";
 
 .main_intro {
-    border: 2px solid yellow;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,7 +15,7 @@
         color: var(--VeryDarkDesaturatedBlue);
         font-size: 0.94rem;
         position: relative;
-        border: 1px solid yellowgreen;
+
         &::after {
             content: "";
             height: 10px;
@@ -52,7 +51,6 @@
     }
 }
 .section_image {
-    border: 4px solid magenta;
     display: flex;
 
     picture {
@@ -69,17 +67,16 @@
     }
 }
 .section_detail {
-    border: 2px solid green;
     text-align: center;
     @media screen and (min-width: $desktop) {
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: start;
     }
 }
 .detail_wrap {
-    border: 4px solid orangered;
     padding: 64px 24px;
     @media screen and (min-width: $desktop) {
         padding: 0;

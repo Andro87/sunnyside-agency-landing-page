@@ -1,7 +1,6 @@
 @import "../styles/variables.scss";
 
 .detail_container {
-    border: 2px solid orangered;
     position: relative;
     width: 100%;
     display: flex;
@@ -19,7 +18,6 @@
     }
 }
 .info_wrap {
-    border: 2px solid purple;
     position: absolute;
     padding: 0 24px 60px;
     bottom: 0;

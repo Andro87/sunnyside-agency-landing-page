@@ -19,7 +19,7 @@ export default function Home() {
             </Head>
             <header className={styles.header}>
                 <div className={styles.navigation_wrap}>
-                    <img src="../images/logo.svg" alt="logo" />
+                    <img src="../images/logo.svg" alt="" />
 
                     <button
                         type="button"
