@@ -114,6 +114,7 @@
         background-color: hsl(198, 81%, 75%);
         color: var(--White);
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
     }
     @media screen and (min-width: $desktop) {
         background: var(--White);
@@ -219,6 +220,7 @@
         padding: 72px 0;
     }
     a {
+        transition: all 0.3s ease-in-out;
         text-decoration: none;
         font-family: "barlow";
         color: var(--DarkDesaturatedCyan);
@@ -244,6 +246,7 @@
         &:hover {
             path {
                 fill: var(--White);
+                transition: all 0.3s ease-in-out;
             }
             cursor: pointer;
         }
