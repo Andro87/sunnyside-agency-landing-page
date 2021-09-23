@@ -5,17 +5,17 @@ interface Props {
     readonly picture: ReactNode;
     readonly info: string;
     readonly name: string;
-    readonly position: string;
+    readonly job: string;
 }
 const Testimonial: React.FunctionComponent<Props> = props => {
-    const { picture, info, name, position } = props;
+    const { picture, info, name, job } = props;
     return (
         <div className={styles.testimonial}>
             {picture}
             <p>{info}</p>
-            <div className={styles.details}>
-                <h4>{name}</h4>
-                <p>{position}</p>
+            <div className={styles.wrap}>
+                <h5>{name}</h5>
+                <p>{job}</p>
             </div>
         </div>
     );
